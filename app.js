@@ -6,7 +6,7 @@ dotenv.config();
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (req, res) => {      //works with app.use(express.static('public'));
+app.get('/', (req, res) => {     
   res.sendFile(__dirname + '/public/index.html');
 });
 
@@ -64,3 +64,4 @@ app.post('/weather-by-coords', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
 });
+
